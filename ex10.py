@@ -15,10 +15,12 @@ if dados["localidade"] != "São Paulo":
 
 area = cep[:5]
 if area < "1600":
-    print("Região: Sul")
+    print("Região: Zona Centro")
 elif area < "3000":
-    print("Região: Norte")  
+    print("Região: Zona Norte")  
+elif area < "4000" or area >= "8000":
+    print("Região: Zona Leste")
+elif area < "4900":
+    print("Região: Zona Sul")
 elif area < "6000":
-    print("Região: Leste")
-elif area < "8000":
-    print("Região: Oeste")
+    print("Região: Zona Oeste")
